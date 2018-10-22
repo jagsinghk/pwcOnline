@@ -12,22 +12,22 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class StepDefinitions {
-	
-private WebDriver webDriver;
-private GoogleHomePage googleHomePage;
-	
+
+	private WebDriver webDriver;
+	private GoogleHomePage googleHomePage;
+
 	@Before
 	public void setup() {
 		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
 		webDriver = new ChromeDriver();
 		googleHomePage = new GoogleHomePage(webDriver);
 	}
-	
+
 	@After
 	public void tearDown() {
 		webDriver.quit();
 	}
-	
+
 	@Given("I navigate to the Google homepage")
 	public void i_navigate_to_the_Google_homepage() throws InterruptedException {
 		googleHomePage.navigateTo();
@@ -35,7 +35,8 @@ private GoogleHomePage googleHomePage;
 
 	@When("I enter {string} into the search bar")
 	public void i_enter_into_the_search_bar(String searchString) {
-		googleHomePage.enterSearchString(searchString);;
+		googleHomePage.enterSearchString(searchString);
+		;
 	}
 
 	@When("I press the return key")
