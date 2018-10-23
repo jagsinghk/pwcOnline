@@ -1,22 +1,22 @@
-package com.apivista.cucumber_selenium_starter;
+package com.apivista.cucumber_selenium_starter.sample;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class GoogleHomePage {
-	private WebDriver driver;
-	private static final String GOOGLE_HOMEPAGE_URL = "https://www.google.com";
+import com.apivista.cucumber_selenium_starter.BasePage;
+
+public class GoogleHomePage extends BasePage{
+	public static final String GOOGLE_HOMEPAGE_URL = "https://www.google.com";
 	private static final By SEARCH_INPUT = By.name("q");
 	private static final By SEARCH_RESULTS = By.id("search");
 
-	public GoogleHomePage(WebDriver webDriver) {
-		this.driver = webDriver;
-	}
+	public GoogleHomePage(WebDriver webDriver, WebDriverWait wait) {
+		super(webDriver, wait);
+		System.out.println("----------------------------------- Google page constructor");
 
-	public void navigateTo() {
-		driver.get(GOOGLE_HOMEPAGE_URL);
 	}
 
 	public void enterSearchString(String searchString) {

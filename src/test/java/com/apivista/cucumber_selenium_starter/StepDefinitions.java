@@ -2,35 +2,32 @@ package com.apivista.cucumber_selenium_starter;
 
 import static org.junit.Assert.assertTrue;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
+import com.apivista.cucumber_selenium_starter.sample.GoogleHomePage;
 
-import cucumber.api.java.After;
-import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class StepDefinitions {
+public class StepDefinitions extends BaseStepDefinitions{
 
-	private WebDriver webDriver;
-	private GoogleHomePage googleHomePage;
-
-	@Before
-	public void setup() {
-		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver");
-		webDriver = new ChromeDriver();
-		googleHomePage = new GoogleHomePage(webDriver);
-	}
-
-	@After
-	public void tearDown() {
-		webDriver.quit();
-	}
+//	private WebDriver webDriver;
+	private GoogleHomePage googleHomePage = new GoogleHomePage(driver, wait);
+//
+//	@Before
+//	public void setup() {
+//		System.out.println("----------------------------------- Before");
+//
+//		googleHomePage = new GoogleHomePage(driver, wait);
+//	}
+//
+//	@After
+//	public void tearDown() {
+//		webDriver.quit();
+//	}
 
 	@Given("I navigate to the Google homepage")
 	public void i_navigate_to_the_Google_homepage() throws InterruptedException {
-		googleHomePage.navigateTo();
+		googleHomePage.navigateTo(GoogleHomePage.GOOGLE_HOMEPAGE_URL);
 	}
 
 	@When("I enter {string} into the search bar")
