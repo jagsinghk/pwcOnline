@@ -43,6 +43,10 @@ local.properties
 # TeXlipse plugin
 .texlipse
 
+# Eclipse Plugins
+.checkstyle
+.eclipse-pmd
+
 # STS (Spring Tool Suite)
 .springBeans
 

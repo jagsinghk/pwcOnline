@@ -1,29 +1,17 @@
-package com.apivista.cucumber_selenium_starter;
+package com.apivista.cucumber_selenium_starter.sample;
 
 import static org.junit.Assert.assertTrue;
 
+import com.apivista.cucumber_selenium_starter.DriverFactory;
 import com.apivista.cucumber_selenium_starter.sample.GoogleHomePage;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class StepDefinitions extends BaseStepDefinitions{
+public class GoogleStepDefinitions {
 
-//	private WebDriver webDriver;
-	private GoogleHomePage googleHomePage = new GoogleHomePage(driver, wait);
-//
-//	@Before
-//	public void setup() {
-//		System.out.println("----------------------------------- Before");
-//
-//		googleHomePage = new GoogleHomePage(driver, wait);
-//	}
-//
-//	@After
-//	public void tearDown() {
-//		webDriver.quit();
-//	}
+	private GoogleHomePage googleHomePage = new GoogleHomePage(new DriverFactory().getDriver());
 
 	@Given("I navigate to the Google homepage")
 	public void i_navigate_to_the_Google_homepage() throws InterruptedException {
@@ -33,7 +21,6 @@ public class StepDefinitions extends BaseStepDefinitions{
 	@When("I enter {string} into the search bar")
 	public void i_enter_into_the_search_bar(String searchString) {
 		googleHomePage.enterSearchString(searchString);
-		;
 	}
 
 	@When("I press the return key")
