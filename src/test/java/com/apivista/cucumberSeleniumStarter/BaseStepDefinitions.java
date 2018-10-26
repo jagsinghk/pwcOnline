@@ -1,6 +1,8 @@
-package com.apivista.cucumber_selenium_starter;
+package com.apivista.cucumberSeleniumStarter;
 
 import org.openqa.selenium.WebDriver;
+
+import com.apivista.cucumberSeleniumStarter.utils.DriverFactory;
 
 import cucumber.api.java.After;
 import cucumber.api.java.Before;

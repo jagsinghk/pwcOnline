@@ -1,15 +1,13 @@
-package com.apivista.cucumber_selenium_starter.sample;
+package com.apivista.cucumberSeleniumStarter.google;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.apivista.cucumber_selenium_starter.BasePage;
+import com.apivista.cucumberSeleniumStarter.BasePage;
 
 public class GoogleHomePage extends BasePage {
-	public static final String GOOGLE_HOMEPAGE_URL = "https://www.google.com";
-
 	@FindBy(name = "q")
 	private WebElement searchInput;
 	@FindBy(id = "search")

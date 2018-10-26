@@ -1,4 +1,4 @@
-package com.apivista.cucumber_selenium_starter;
+package com.apivista.cucumberSeleniumStarter.utils;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;

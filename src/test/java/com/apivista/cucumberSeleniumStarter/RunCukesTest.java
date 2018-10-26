@@ -1,4 +1,4 @@
-package com.apivista.cucumber_selenium_starter;
+package com.apivista.cucumberSeleniumStarter;
 
 import org.junit.runner.RunWith;
 

@@ -1,9 +1,9 @@
-package com.apivista.cucumber_selenium_starter.sample;
+package com.apivista.cucumberSeleniumStarter.google;
 
 import static org.junit.Assert.assertTrue;
 
-import com.apivista.cucumber_selenium_starter.DriverFactory;
-import com.apivista.cucumber_selenium_starter.sample.GoogleHomePage;
+import com.apivista.cucumberSeleniumStarter.utils.DriverFactory;
+import com.apivista.cucumberSeleniumStarter.utils.PropertyReader;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -15,7 +15,7 @@ public class GoogleStepDefinitions {
 
 	@Given("I navigate to the Google homepage")
 	public void i_navigate_to_the_Google_homepage() throws InterruptedException {
-		googleHomePage.navigateTo(GoogleHomePage.GOOGLE_HOMEPAGE_URL);
+		googleHomePage.navigateTo(new PropertyReader().readProperty("googleUrl"));
 	}
 
 	@When("I enter {string} into the search bar")
