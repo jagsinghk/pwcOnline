@@ -1,4 +1,4 @@
-package com.apivista.cucumberSeleniumStarter.utils;
+package com.apivista.cucumberseleniumstarter.utils;
 
 import java.io.FileInputStream;
 import java.io.IOException;

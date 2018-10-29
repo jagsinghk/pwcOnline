@@ -1,11 +1,11 @@
-package com.apivista.cucumberSeleniumStarter.google;
+package com.apivista.cucumberseleniumstarter.google;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-import com.apivista.cucumberSeleniumStarter.BasePage;
+import com.apivista.cucumberseleniumstarter.BasePage;
 
 public class GoogleHomePage extends BasePage {
 	@FindBy(name = "q")

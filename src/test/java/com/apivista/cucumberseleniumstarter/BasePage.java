@@ -1,4 +1,4 @@
-package com.apivista.cucumberSeleniumStarter;
+package com.apivista.cucumberseleniumstarter;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;

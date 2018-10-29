@@ -1,9 +1,9 @@
-package com.apivista.cucumberSeleniumStarter.google;
+package com.apivista.cucumberseleniumstarter.google;
 
 import static org.junit.Assert.assertTrue;
 
-import com.apivista.cucumberSeleniumStarter.utils.DriverFactory;
-import com.apivista.cucumberSeleniumStarter.utils.PropertyReader;
+import com.apivista.cucumberseleniumstarter.utils.DriverFactory;
+import com.apivista.cucumberseleniumstarter.utils.PropertyReader;
 
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
