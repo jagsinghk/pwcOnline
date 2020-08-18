@@ -1,5 +1,5 @@
 *.class
- 
+
 # Package Files #
 *.jar
 *.war
@@ -24,6 +24,7 @@ local.properties
 .settings/
 .loadpath
 .recommenders
+.idea
 
 # Eclipse Core
 .project
